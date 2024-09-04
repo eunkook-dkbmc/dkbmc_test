@@ -1,0 +1,14 @@
+.slds-box {
+    background-color: white;
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+}
+
+.slds-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.slds-item:hover {
+    background-color: #f4f6f9;
+}

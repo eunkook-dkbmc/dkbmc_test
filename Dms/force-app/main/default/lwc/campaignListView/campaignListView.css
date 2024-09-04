@@ -1,0 +1,20 @@
+.search-input-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0; 
+}
+
+.slds-m-around_medium {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input-wrapper {
+    margin-top: -1.5rem; 
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Start Here</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Force.com</label>
+    <tabs>Claim__c</tabs>
+    <tabs>Promotion__c</tabs>
+    <tabs>PromotionTarget__c</tabs>
+    <tabs>ClaimItem__c</tabs>
+    <tabs>Equipment__c</tabs>
+    <tabs>Notice__c</tabs>
+    <tabs>EquipmentAsset__c</tabs>
+    <tabs>EquipmentRequest__c</tabs>
+    <tabs>ToDoList__c</tabs>
+    <tabs>EquipmentRequestLineItem__c</tabs>
+    <tabs>EquipmentDelivery__c</tabs>
+    <tabs>EquipmentReturn__c</tabs>
+    <tabs>EquipmentDeliLineItem__c</tabs>
+    <tabs>EquipmentReturnLineItem__c</tabs>
+    <tabs>AssetWarranty__c</tabs>
+    <tabs>UnitofMeasure__c</tabs>
+    <tabs>FulfillmentOrder__c</tabs>
+    <tabs>PurchaseOrder__c</tabs>
+    <tabs>SalesRevenue__c</tabs>
+    <tabs>TaxInvoice__c</tabs>
+    <tabs>WarrantyTerm__c</tabs>
+    <tabs>EndCustomer__c</tabs>
+    <tabs>TAXInvoiceSummary__c</tabs>
+    <tabs>AR__c</tabs>
+    <tabs>Model__c</tabs>
+    <tabs>Credit__c</tabs>
+</CustomApplication>

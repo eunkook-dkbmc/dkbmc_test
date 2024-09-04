@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : kyunghoon.kim@dkbmc.com
+  @group             : 
+  @last modified on  : 09-04-2024
+  @last modified by  : kyunghoon.kim@dkbmc.com
+-->
+<template>
+        <div class="slds-m-around_medium">
+            <div class="title-bar">
+                <h2 class="slds-text-heading_medium">판매</h2>
+                <!-- New 버튼 -->
+                <lightning-button
+                    label="새로 만들기"
+                    onclick={handleNew}
+                    class="slds-m-bottom_medium"
+                ></lightning-button>
+            </div>
+            
+            <!-- 검색 필터 -->
+            <div class="search-input-wrapper">
+                <lightning-input 
+                    type="search" 
+                    onkeyup={handleSearch}
+                    class="slds-m-bottom_medium"
+                ></lightning-input>
+            </div>
+
+            <!-- 데이터 테이블 -->
+            <lightning-datatable
+                key-field="id"
+                data={products}
+                columns={columns}
+                hide-checkbox-column="true"
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleSort}
+                onrowaction={handleRowAction}
+                show-row-number-column="true"
+            >
+            </lightning-datatable>
+        </div>
+
+        <!-- 새로 만들기 모달 -->
+        <template if:true={showModal}>
+            <c-new-modal onclose={handleCloseModal}></c-new-modal>
+        </template>
+</template>

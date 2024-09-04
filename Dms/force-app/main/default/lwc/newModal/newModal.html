@@ -1,0 +1,64 @@
+<!--
+  @description       : 
+  @author            : yoseong.kang@dkbmc.com
+  @group             : 
+  @last modified on  : 2024-09-04
+  @last modified by  : yoseong.kang@dkbmc.com
+  Modifications Log
+  Ver   Date         Author                   Modification
+  1.0   2024-09-03   yoseong.kang@dkbmc.com   Initial Version
+-->
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+        <div class="slds-modal__container">
+            
+            <!--모달 상단 삭제 버튼 -->
+            <lightning-button-icon
+                icon-name="utility:close"
+                variant="bare-inverse"
+                size="large"
+                class="slds-modal__close"
+                onclick={handleClose}
+            ></lightning-button-icon>
+            <span class="slds-assistive-text">Close</span>
+
+            <!-- 스피너 -->
+            
+            <!-- 모달 헤더 부분 -->
+            <div class="slds-modal__header">
+                <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">새 판매</h1>
+            </div>
+            
+            <!-- 모달 콘텐츠 부분 -->
+            <div class="slds-modal__content bodyHeight slds-is-relative" id="modal-content-id-1">
+                
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </template>
+                <div style="justify-content: center; align-items: center;">
+                    <lightning-input type="text" label="Sales Revenue Name" required onchange={handleNameChange} class="slds-m-left_x-large"></lightning-input>
+                    <c-custom-lookup
+                    icon-name="standard:account"
+                    s-object-api-name="account"
+                    label="Sold to Account"
+                    onlookupupdate={lookupRecord}
+                    placeholder="계정 검색..."
+                    ></c-custom-lookup>
+                    <lightning-input type="number" label="Amount KRW" formatter="currency" onchange={handleAmountChange} ></lightning-input>
+                    <lightning-input type="number" label="Net Price KRW" formatter="currency" onchange={handlePriceChange} ></lightning-input>
+                    <lightning-input type="number" label="Quantity" onchange={handleQuantityChange} ></lightning-input>
+                    <lightning-input type="date" label="Bill Date" onchange={handleBillChange} class="slds-m-bottom_x-large"></lightning-input>
+                </div>
+                
+            </div>
+
+            <!-- 모달 푸터 부분 -->
+            <div class="slds-modal__footer">
+                <lightning-button label="취소" onclick={handleClose} class="slds-m-left_x-small"></lightning-button>
+                <!-- <lightning-button label="저장 및 새로 만들기" onclick={handleSaveNew} class="slds-m-left_x-small"></lightning-button> -->
+                <lightning-button label="저장" variant="brand" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </div>                   
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div> 
+</template>

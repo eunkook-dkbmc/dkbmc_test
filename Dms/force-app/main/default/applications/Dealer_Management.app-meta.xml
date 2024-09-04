@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>image_resized_460x560_compressed</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Dealer Management</label>
+    <navType>Standard</navType>
+    <tabs>standard-Account</tabs>
+    <tabs>EndCustomer__c</tabs>
+    <tabs>SalesRevenue__c</tabs>
+    <tabs>PurchaseOrder__c</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>FulfillmentOrder__c</tabs>
+    <tabs>standard-Shipment</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>WarrantyTerm__c</tabs>
+    <tabs>standard-Promotion</tabs>
+    <tabs>standard-PartnerFundAllocation</tabs>
+    <tabs>standard-PartnerFundClaim</tabs>
+    <tabs>standard-PartnerFundRequest</tabs>
+    <tabs>AR__c</tabs>
+    <tabs>Model__c</tabs>
+    <tabs>Credit__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Dealer_Management_UtilityBar</utilityBar>
+</CustomApplication>

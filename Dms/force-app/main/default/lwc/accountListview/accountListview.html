@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : yoseong.kang@dkbmc.com
+  @group             : 
+  @last modified on  : 2024-08-22
+  @last modified by  : yoseong.kang@dkbmc.com
+  Modifications Log
+  Ver   Date         Author                   Modification
+  1.0   2024-08-22   yoseong.kang@dkbmc.com   Initial Version
+-->
+<template>
+    <!-- ListView Start -->
+    <lightning-card title="Account List" icon-name="standard:account">
+      <div slot="actions" style="display: flex;">
+        <lightning-button class="slds-float_right customNewButton" label="New" style="padding-top: 19px;" onclick={handleCreate} aria-haspopup="dialog"></lightning-button>
+        <lightning-input type="search" onkeypress={handleEnter} class="searchBox" data-recid="secondValue" placeholder="Search this list..."></lightning-input>
+      </div>
+
+      <lightning-datatable 
+        data={data} 
+        columns={columns} 
+        key-field="Id"
+        show-row-number-column>
+      </lightning-datatable>  
+    </lightning-card>
+</template>
